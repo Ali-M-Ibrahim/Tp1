@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\RGeneralController;
-
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +50,10 @@ Route::get('/Parametre2/{id}', [GeneralController::class,'parametre'])->name("al
 Route::post("/postdata",[GeneralController::class,'postdata']);
 Route::post("/postdata2",[GeneralController::class,'postdata2']);
 
+
+
+
+Route::resource('category', CategoryController::class );
 
 
 
