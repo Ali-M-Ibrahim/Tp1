@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\RGeneralController;
+use App\Http\Controllers\CategoryController;
 
 
 /*
@@ -53,3 +54,4 @@ Route::post("/postdata2",[GeneralController::class,'postdata2']);
 
 
 
+Route::resource('category', CategoryController::class );
