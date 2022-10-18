@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
-            $table->id();
-            $table->string("title")->nullable();
-            $table->longText("description")->nullable();
-            $table->boolean("active")->nullable();
-            $table->string("image")->nullable();
-            $table->timestamps();
+        Schema::table('categories', function (Blueprint $table) {
+            $table->integer("batch");
         });
     }
 
@@ -30,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::table('categories', function (Blueprint $table) {
+            //
+        });
     }
 };
