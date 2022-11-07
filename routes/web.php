@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\RGeneralController;
 use App\Http\Controllers\CategoryController;
-
+use App\Http\Controllers\DIController;
+use App\Http\Controllers\DIConstructorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,3 +58,7 @@ Route::resource('category', CategoryController::class );
 
 
 
+Route::get('/DITest', [DIController::class,'index']);
+Route::get('/DITest2', [DIConstructorController::class,'index']);
+Route::get('/DITest3', [DIConstructorController::class,'index2']);
+Route::get('/DITest4', [DIConstructorController::class,'index3']);
