@@ -98,4 +98,8 @@ class departmentController extends Controller
         $data->delete();
         return redirect(route("department.index"));
     }
+
+
+
+
 }

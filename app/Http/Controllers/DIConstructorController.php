@@ -3,33 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\logger;
+use App\Services\LoggerService;
+
+
 class DIConstructorController extends Controller
 {
 
-
-    private $logService;
-
-    public function __construct(logger $mylog)
-    {
-        $this->logService=$mylog;
+    private $mylogservice;
+    public function __construct(LoggerService $myservice){
+    $this->mylogservice=$myservice;
     }
 
     public function index(){
-        $this->logService->log("hi this is my second example in DI");
+        $this->mylogservice->log("this is my second example on DI ");
+        return "ok";
     }
 
     public function index2(){
-        $this->logService->log("hi this is my second example in DI");
+        $this->mylogservice->log("this is my second example on DI");
+        return "ok";
     }
-    public function index3(){
-        $this->logService->log("hi this is my second example in DI");
-    }
-
-    public function index4(){
-        $this->logService->log("hi this is my second example in DI");
-    }
-
-
-
 }

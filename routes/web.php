@@ -57,8 +57,5 @@ Route::post("/postdata2",[GeneralController::class,'postdata2']);
 Route::resource('category', CategoryController::class );
 
 
-
-Route::get('/DITest', [DIController::class,'index']);
-Route::get('/DITest2', [DIConstructorController::class,'index']);
-Route::get('/DITest3', [DIConstructorController::class,'index2']);
-Route::get('/DITest4', [DIConstructorController::class,'index3']);
+Route::get('/testDI', [DIController::class,'index']);
+Route::get('/testDI2', [DIConstructorController::class,'index']);

@@ -2,22 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\LoggerService;
 use Illuminate\Http\Request;
-use App\Services\logger;
+
 class DIController extends Controller
 {
 
-
-    public function index(logger $logService){
-        $logService->log("hi this is my first example in DI");
+    public function index(LoggerService $myservice){
+        $myservice->log("this is my first example on DI");
+        return "ok";
     }
 
-    public function index2(logger $logService){
-
-        $logService->log("hi this is my first example in DI");
-
+    public function index2(LoggerService $myservice){
+        $myservice->log("this is my first example on DI");
+        return "ok";
     }
-
-
-
+    public function index3(LoggerService $myservice){
+        $myservice->log("this is my first example on DI");
+        return "ok";
+    }
+    public function index4(LoggerService $myservice){
+        $myservice->log("this is my first example on DI");
+        return "ok";
+    }
 }
