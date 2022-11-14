@@ -6,6 +6,7 @@ use App\Http\Controllers\RGeneralController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DIController;
 use App\Http\Controllers\DIConstructorController;
+use App\Http\Controllers\bladeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,3 +60,7 @@ Route::resource('category', CategoryController::class );
 
 Route::get('/testDI', [DIController::class,'index']);
 Route::get('/testDI2', [DIConstructorController::class,'index']);
+
+Route::get('/firstblade', [bladeController::class,'index']);
+Route::get('/firstpage', [bladeController::class,'index2']);
+Route::get('/firstpage2', [bladeController::class,'index3']);
